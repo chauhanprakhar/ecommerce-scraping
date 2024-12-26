@@ -77,6 +77,7 @@ app/
 ```bash
 uvicorn app.main:app --reload
 ```
+PS: Please don't forget to run Redis first
 
 2. Make a scraping request:
 ```bash
@@ -114,6 +115,14 @@ Scrapes product information from the specified website.
   }
 ]
 ```
+Response will also be saved as JSON in product.json file which will be created when  you hit the /scrape endpoint
+![image](https://github.com/user-attachments/assets/d98012f5-dcbd-466c-8df4-94cbbd8953d0)
+
+Images will be saved to a folder named images which will also be created when you hit the /scrape endpoint
+![image](https://github.com/user-attachments/assets/8bac9603-f1d5-47e1-a846-c61bb0cf95e7)
+
+
+
 
 ## Error Handling
 
@@ -123,7 +132,3 @@ The application includes comprehensive error handling:
 - Automatic retry for failed requests
 - Rate limiting protection
 
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
