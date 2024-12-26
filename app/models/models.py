@@ -4,7 +4,7 @@ from typing import List, Optional
 class ScrapingSettings(BaseModel):
     page_limit: Optional[int] = None
     proxy: Optional[str] = None
-    target_url: Optional[HttpUrl] = None  # Added target URL field
+    target_url: Optional[HttpUrl] = None  
 
 class Product(BaseModel):
     product_title: str

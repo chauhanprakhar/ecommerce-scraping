@@ -30,7 +30,6 @@ async def scrape_products(
     scraping_settings: ScrapingSettings,
     api_key: str = Depends(get_api_key)
 ):
-    # Use provided URL or default from settings
     target_url = scraping_settings.target_url or settings.DEFAULT_TARGET_URL
     scraper = Scraper(str(target_url))
     storage = JsonStorage()
@@ -46,7 +45,6 @@ async def scrape_products(
     while page <= max_pages:
         try:
             products = await scraper.scrape_page(page, scraping_settings)
-            # print("page:"+ page + scraping_settings)
             if not products:
                 break
                 

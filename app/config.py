@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     RETRY_ATTEMPTS: int = 3
     RETRY_DELAY: int = 5
     REDIS_URL: str = "redis://localhost:6379"
-    DEFAULT_TARGET_URL: HttpUrl = "https://dentalstall.com/shop/"  # Default URL
+    DEFAULT_TARGET_URL: HttpUrl = "https://dentalstall.com/shop/" 
     
     class Config:
         env_file = ".env"
